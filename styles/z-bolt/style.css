@@ -20,18 +20,22 @@ button:active {
 
 button.color1 {
     border-bottom-color: #ED6500;
+    border-radius: 10px;
 }
 
 button.color2 {
     border-bottom-color: #B10080;
+    border-radius: 10px;
 }
 
 button.color3 {
     border-bottom-color: #009384;
+    border-radius: 10px;
 }
 
 button.color4 {
     border-bottom-color: #A7E100;
+    border-radius: 10px;
 }
 
 button.active {

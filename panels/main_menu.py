@@ -35,8 +35,15 @@ class MainPanel(MenuPanel):
 
         add_heaters = self._printer.get_heaters()
         for h in add_heaters:
+            print("###### heters###", h)
             if h == "heater_bed":
                 self.labels[h] = self._gtk.ButtonImage("bed", self._gtk.formatTemperatureString(0, 0))
+            elif h == "temperature_sensor PI4":
+                name = " ".join(h.split(" ")[1:])
+                self.labels[h] = self._gtk.ButtonImage("pi", name)
+            elif h == "temperature_sensor NanoV1":
+                name = " ".join(h.split(" ")[1:])
+                self.labels[h] = self._gtk.ButtonImage("nano", name)
             else:
                 name = " ".join(h.split(" ")[1:])
                 self.labels[h] = self._gtk.ButtonImage("heat-up", name)
